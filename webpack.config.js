@@ -7,7 +7,8 @@ const path = require('path');
 module.exports = {
   entry: {
     app: [
-      path.resolve(__dirname, 'app', 'index.js')
+      path.resolve(__dirname, 'app', 'index.js'),
+      'webpack-hot-middleware/client'
     ]
   },
   module: {
@@ -18,7 +19,13 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/dist/',
+    publicPath: '/dist',
     filename: 'bundle.js'
-  }
+  },
+  plugins: [
+    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin()
+  ]
+
 }

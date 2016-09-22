@@ -17,6 +17,8 @@ const webpackConfig = require('./webpack.config.js');
 const compiler = webpack(webpackConfig);
 
 app.use(webpackDevMiddleware(compiler, {
+  hot: true,
+  filename: 'bundle.js',
   publicPath: webpackConfig.output.publicPath
 }));
 app.use(webpackHotMiddleware(compiler));
