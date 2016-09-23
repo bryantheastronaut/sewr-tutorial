@@ -222,6 +222,11 @@ _.babelrc_
 If we compile our webpack again with `npm run build` it should work!
 ![img4](./img4.png)
 
-So thats all well and good, but if we need to make any changes to anything, we need to recompile our webpack bundle, restart our server, AND refresh the page. Thats asking a whole lot. In the next section, were going to add in some webpack middleware to our express server to enable us to use the Webpack Dev Server AND the Hot Module Reloading on our own server! Weeeee!
+So thats all well and good, but if we need to make any changes to anything, we need to recompile our webpack bundle, restart our server, AND refresh the page. Thats asking a whole lot. In the next section, were going to add in some middleware to our express server to enable us to use the webpack dev server AND the hot module reloading on our own server! Weeeee!
 
 ### Adding in some middleware...
+
+We already downloaded the dependencies earlier, so lets go back into our _server.js_ file and incorporate the middleware.
+
+    //server.js
+    

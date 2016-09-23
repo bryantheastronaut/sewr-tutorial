@@ -8,7 +8,7 @@ module.exports = {
   entry: {
     app: [
       path.resolve(__dirname, 'app', 'index.js'),
-      'webpack-hot-middleware/client'
+      'webpack-hot-middleware/client?reload=true'
     ]
   },
   module: {
